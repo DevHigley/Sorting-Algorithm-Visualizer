@@ -1,0 +1,153 @@
+$gray: rgba(
+	$color: #757575,
+	$alpha: 0.7,
+);
+$black: rgba(
+	$color: #000000,
+	$alpha: 0.98,
+);
+$white: rgba(
+	$color: #ffffff,
+	$alpha: 0.98,
+);
+$red: rgba(
+	$color: #e91d1d,
+	$alpha: 1,
+);
+$pink: rgba(
+	$color: #f34c4c,
+	$alpha: 1,
+);
+$green: rgba(
+	$color: #6dff7a,
+	$alpha: 1,
+);
+$purple: rgba(
+	$color: #866beb,
+	$alpha: 1,
+);
+$dark_purple: rgba(
+	$color: #42299b,
+	$alpha: 1,
+);
+
+html,
+body,
+#root {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: $black;
+}
+
+div {
+	.menu {
+		width: 100%;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-evenly;
+	}
+	.label,
+	.btn {
+		color: $white;
+		font-size: 2vw;
+		font-weight: bold;
+	}
+	.btn:hover:enabled {
+		color: $red;
+	}
+	.btn:disabled,
+	.disabled {
+		color: $gray;
+		pointer-events: none;
+	}
+	.highlight {
+		color: $red;
+	}
+	.slider {
+		width: 9vw;
+		height: 5px;
+		outline: none;
+		margin: 10px 0px;
+		border-radius: 5px;
+		background: $white;
+
+		-webkit-appearance: none;
+		-webkit-transition: 0.2s;
+		transition: opacity 0.2s;
+	}
+	.slider::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		appearance: none;
+		border-radius: 50%;
+		background: $red;
+	}
+	.reverse {
+		direction: rtl;
+	}
+	.slider-container {
+		padding: 6px 12px;
+		text-align: center;
+		display: grid;
+	}
+	.bars {
+		margin: 0 auto;
+		display: inline-flex;
+		align-items: flex-end;
+
+		//left: 50%;
+		bottom: 0px;
+		width: 100%;
+		position: absolute;
+		//transform: translateX(-50%);
+	}
+	.bar {
+		flex-grow: 1;
+		margin: 0px 2px;
+		background-color: $white;
+	}
+	.swapping {
+		background-color: $red;
+	}
+	.signature {
+		bottom: 0px;
+		right: 15px;
+		position: absolute;
+
+		color: $black;
+		font-weight: bold;
+		font-size: xx-large;
+	}
+	// .unselected {
+	// 	background-color: $white;
+	// }
+	// .selected {
+	// 	background-color: $red;
+	// }
+	// .final {
+	// 	background-color: $green;
+	// }
+}
+
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+	box-shadow: none !important;
+	-webkit-appearance: none;
+}
+
+// .bars {
+// 	margin: 0 auto;
+// 	display: inline-flex;
+// 	align-items: flex-end;
+
+// 	left: 50%;
+// 	bottom: 0px;
+// 	position: absolute;
+// 	transform: translateX(-50%);
+// }

@@ -10,10 +10,9 @@ class HeapSort {
 
 		for (var i = n / 2 - 1; i >= 0; i--) this.heapify(array, n, i);
 
-		// eslint-disable-next-line no-redeclare
-		for (var i = n - 1; i > 0; i--) {
-			swap(array, 0, i, this.log);
-			this.heapify(array, i, 0);
+		for (var j = n - 1; j > 0; j--) {
+			swap(array, 0, j, this.log);
+			this.heapify(array, j, 0);
 		}
 	}
 
@@ -32,41 +31,3 @@ class HeapSort {
 }
 
 export default HeapSort;
-
-/*
-import swap from "./Swap";
-
-class HeapSort {
-	constructor(update) {
-		this.log = [];
-	}
-
-	sort(array) {
-		this.buildMaxHeap(array);
-		for(var i = array.length; i > 1; i--){
-			swap(array, 1, i, this.log)
-			this.heapify(array, 1)
-		}
-	}
-
-	buildMaxHeap(array) {
-		for (var i = Math.floor(array.length / 2); i > 1; i--) this.heapify(array, i);
-	}
-
-	heapify(array, i) {
-		var max = i;
-		var left = i * 2;
-		var right = i * 2 + 1;
-
-		if (left <= array.length && array[left] > array[i]) max = left;
-		if (right <= array.length && array[right] > array[max]) max = right;
-
-		if (max != i) {
-			swap(array, i, max, this.log);
-			this.heapify(array, max);
-		}
-	}
-}
-
-export default HeapSort;
-*/

@@ -23,7 +23,6 @@ class App extends React.Component {
 	}
 
 	sort(sorter) {
-		//this.reset();
 		sorter.sort([...this.state.bars]);
 		const log = sorter.log;
 		//log.unshift({ bars: this.state.bars, swaps: [] });
@@ -64,74 +63,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-/*
-reset() {
-	console.log("reset");
-	if (this.state.log.length > 0) {
-		console.log("if");
-		// this.setState({ bars: this.createBars(), swaps: [], log: [], sorting: false, interval: null });
-		this.setState({ bars: this.state.log[1].bars, swaps: [], log: [], sorting: false, interval: null });
-	} else {
-		console.log("else");
-		//this.setState({ bars: this.createBars(), swaps: [], log: [], sorting: false, interval: null });
-		//this.setState({ bars: this.state.log[0].bars, swaps: [], log: [], sorting: false, interval: null });
-	}
-}
-*/
-
-// timelapser(i = 0) {
-// 	console.log(`timelapse ${i} sorting: ${this.state.sorting}`);
-// 	setTimeout(() => {
-// 		if (this.state.sorting && i < this.state.log.length) {
-// 			this.setState({ bars: this.state.log[i].bars, swaps: this.state.log[i++].swaps });
-// 			this.timelapse(i);
-// 		}
-// 	}, this.state.speed);
-// 	console.log(this.state.speed);
-// }
-
-/* 
-<input readOnly className="btn" value="Reset" onClick={() => this.reset()} />
-<input readOnly className="btn" value="Quick Sort" onClick={() => this.sort(new QuickSort())} />
-<input readOnly className="btn" value="Bubble Sort" onClick={() => this.sort(new BubbleSort())} />
-<input readOnly className="btn" value="Insertion Sort" onClick={() => this.sort(new InsertionSort())} />
-<input readOnly className="btn" value="Selection Sort" onClick={() => this.sort(new SelectionSort())} /> 
-*/
-
-/*
-	timelapse(i = 0) {
-		const interval = setInterval(() => {
-			if (this.state.sorting && i < this.state.log.length) {
-				this.setState({ bars: this.state.log[i].bars, swaps: this.state.log[i].swaps });
-				i++;
-			} else {
-				console.log("stop");
-				this.stop();
-			}
-		}, this.state.speed);
-		this.setState({ interval: interval });
-	}
-*/
-
-/*
-	timelapse(i = 0) {
-		this.setState({
-			interval: setInterval(() => {
-				if (this.state.sorting && i < this.state.log.length) {
-					this.setState({ bars: this.state.log[i].bars, swaps: this.state.log[i].swaps });
-					i++;
-				} else {
-					console.log("stop");
-					this.stop();
-				}
-			}, this.state.speed),
-		});
-	}
-	*/
-
-/*
-	stop() {
-		clearInterval(this.state.interval);
-	}
-*/

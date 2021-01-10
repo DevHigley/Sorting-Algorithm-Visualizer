@@ -3,5 +3,4 @@ This is my first JavaScript project, I created it primarily as a means to learn 
 
 All of the sorting algorithms used in this project can be located in **\src\algorithms**
 
-> Demo: 
-> [https://rhidlor.github.io/Sorting-Algorithm-Visualizer/](https://rhidlor.github.io/Sorting-Algorithm-Visualizer/)
+[Click here for live demo](https://devhigley.github.io/Sorting-Algorithm-Visualizer/)
